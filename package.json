@@ -1,0 +1,10 @@
+{
+  "name": "sorting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "<samwellander@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "testem": "^2.14.0"
+  }
+}
