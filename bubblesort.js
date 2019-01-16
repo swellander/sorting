@@ -1,5 +1,4 @@
 function swap(arr) {
-  const copy = arr.slice();
   let temp = copy[0];
   copy[0] = copy[1];
   copy[1] = temp;
@@ -29,4 +28,12 @@ function bubbleSort(arr) {
   if (complete) return arr;
   //else concat the sorted end of the arr onto a recursive call to the rest of the array
   else return bubbleSort(arr.slice(0, arr.length - 1)).concat(arr.slice(-1));
+}
+
+function dynamicBubbleSort(arr, func) {
+  if (!arr.length) return arr;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (func(arr[i], arr[i + 1]) === -1) arr.splice(i, 2, ...swap(arr.slice(i, i + 2)))
+  }
 }
